@@ -2,217 +2,259 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
-	<title>Rozpoznawanie gestów z wykorzystaniem kamery webowej do sterowania stroną internetową</title>
+    <title>Rozpoznawanie gestów z wykorzystaniem kamery webowej do sterowania stroną internetową</title>
 
-	<meta name="description" content="What are we using everyday?">
-	<meta name="author" content="Roman Bartusiak">
+    <meta name="description" content="What are we using everyday?">
+    <meta name="author" content="Roman Bartusiak">
 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-	<!-- For syntax highlighting -->
-	<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-	<script>
-		if( window.location.search.match( /print-pdf/gi ) ) {
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = 'css/print/pdf.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		}
-	</script>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    </script>
 
-		<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 
 
-		<link rel="stylesheet" href="css/custom.css" id="theme">
-	</head>
+    <link rel="stylesheet" href="css/custom.css" id="theme">
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Systemy Wizyjne</h1>
-					<h2>Rozpoznawanie gestów z wykorzystaniem kamery webowej do sterowania stroną internetową</h2>
-					<h5>Roman Bartusiak</h5>
-				</section>
-				<section>
-					<h2>Agenda:</h2>
-					<h3><ul>
-						<li>
-							Oczekiwany efekt pracy
-						</li>
-						<li>
-							Zastosowanie
-						</li>
-						<li>
-							Istniejące rozwiązania
-						</li>
-						<li>
-							Możliwe do wykorzystania technologie/biblioteki/algorytmy
-						</li>
-						<li>
-							Podstawy teoretyczne
-						</li>
-					</ul>
-				</h3>
-			</section>
-			<section>
-				<h2>Oczekiwany efekt pracy</h2>
-				<p>Zestaw narzędzi</p>
-				<p>Przystępne API</p>
-				<p>Konfigurowalność</p>
-				<p>Prostota użycia</p>
-			</section>
-			<section>
-				<h2>Zastosowanie</h2>
-				<p>
-					Sterowanie chociażby tą prezentację
-				</p>
-				<p>
-					Marketingowy <em>bajer</em>
-				</p>
-				<p>
-					Gry rozszeżonej rzeczywistości
-				</p>
-				<p>
-					Ułatwienie dostępu
-				</p>
-				<p>
-					Kolejne medium sterowania
-				</p>
-			</section>
-			<section>
-				<section>
-					<h2>Istniejące rozwiązania</h2>
-					<ul>
-						<li>
-							Brak możliwości konfiguracji gestów
-						</li>
-						<li>
-							Trudne w użyciu
-						</li>
-						<li>
-							Nie oficjalne
-						</li>
-						<li>
-							Niska dokładność
-						</li>
-						<li>
-							Tylko proste gesty
-						</li>
-						<li>
-							Skomplikowane, lub całkowity brak API
-						</li>
-					</ul>
-				</section>
-				<section>
-					<iframe src="http://revealjs.herokuapp.com/" style="width:100%;height:100%; position:absolute;left:0;top:0;"></iframe>
-				</section>
-				<section>
-					<iframe src="http://hadi.io/gest.js/demos/simple/index.html" style="width:100%;height:100%; position:absolute;left:0;top:0;"></iframe>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>Możliwe do wykorzystania technologie/biblioteki/algorytmy</h2>
-					<h3>Technologie konieczne</h3>
-					<ul>
-						<li>getUserMedia()</li>
-						<li> znacznik &lt;device&gt</li>
-						<li>WebRTC</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Możliwe do wykorzystania technologie/biblioteki/algorytmy</h2>
-					<h3>Biblioteki:</h3>
-					<ul>
-						<li>
-							tracking.js
-						</li>
-					</ul>
-				</section>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Systemy Wizyjne</h1>
+                <h2>Rozpoznawanie gestów z wykorzystaniem kamery webowej do sterowania stroną internetową</h2>
+                <h5>inż. Roman Bartusiak</h5>
+            </section>
+            <section>
+                <h2>Agenda:</h2>
+                <h3>
+                    <ul>
+                        <li>
+                            Oczekiwany efekt pracy
+                        </li>
+                        <li>
+                            Zastosowanie
+                        </li>
+                        <li>
+                            Istniejące rozwiązania
+                        </li>
+                        <li>
+                            Możliwe do wykorzystania technologie/biblioteki/algorytmy
+                        </li>
+                        <li>
+                            Podstawy teoretyczne
+                        </li>
+                    </ul>
+                </h3>
+            </section>
+            <section>
+                <h2>Oczekiwany efekt pracy</h2>
+                <p>Zestaw narzędzi</p>
+                <p>Przystępne API</p>
+                <p>Konfigurowalność</p>
+                <p>Prostota użycia</p>
+            </section>
+            <section>
+                <h2>Zastosowanie</h2>
+                <p>
+                    Sterowanie chociażby tą prezentację
+                </p>
+                <p>
+                    Marketingowy
+                    <em>bajer</em>
+                </p>
+                <p>
+                    Gry rozszeżonej rzeczywistości
+                </p>
+                <p>
+                    Ułatwienie dostępu
+                </p>
+                <p>
+                    Kolejne medium sterowania
+                </p>
+            </section>
+            <section>
+                <section>
+                    <h2>Istniejące rozwiązania</h2>
+                    <ul>
+                        <li>
+                            Brak możliwości konfiguracji gestów
+                        </li>
+                        <li>
+                            Trudne w użyciu
+                        </li>
+                        <li>
+                            Nie oficjalne
+                        </li>
+                        <li>
+                            Niska dokładność
+                        </li>
+                        <li>
+                            Tylko proste gesty
+                        </li>
+                        <li>
+                            Skomplikowane, lub całkowity brak API
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <iframe src="http://revealjs.herokuapp.com/" style="width:100%;height:100%; position:absolute;left:0;top:0;"></iframe>
+                </section>
+                <section>
+                    <iframe src="http://hadi.io/gest.js/demos/simple/index.html" style="width:100%;height:100%; position:absolute;left:0;top:0;"></iframe>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Możliwe do wykorzystania technologie/biblioteki/algorytmy</h2>
+                    <h3>Technologie konieczne</h3>
+                    <ul>
+                        <li>getUserMedia()</li>
+                        <li>znacznik &lt;device&gt</li>
+                        <li>WebRTC</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Możliwe do wykorzystania technologie/biblioteki/algorytmy</h2>
+                    <h3>Biblioteki:</h3>
+                    <ul>
+                        <li>
+                            tracking.js
+                        </li>
+                        <li>asm.js</li>
+                    </ul>
+                </section>
 
-				<section>
-					<iframe src="http://trackingjs.com/bower/tracking.js/examples/fast_camera.html" style="width:100%;height:100%; position:absolute;left:0;top:0;"></iframe>
-				</section>
+                <section>
+                    <iframe src="http://trackingjs.com/bower/tracking.js/examples/fast_camera.html" style="width:100%;height:100%; position:absolute;left:0;top:0;"></iframe>
+                </section>
 
-				<section>
-					<h2>Możliwe do wykorzystania technologie/biblioteki/algorytmy</h2>
-					<h3>Algorytmy:</h3>
-					<ul>
-						<li>
-							Blend mode difference
-						</li>
-					</ul>
-					
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>Podstawy teoretyczne</h2>
-					<h3>Ukryte modele Markova:</h3>
-					<ul>
-						<li>single</li>
-						<li>linked</li>
-						<li>coupled</li>
-					</ul>
-					<br>
-					<h3>Uczenie:</h3>
-					<ul>
-						<li>Baum–Welch</li>
-						<li>Baldi–Chauvin</li>
-					</ul>
-				</section>
-			</section>
-		</div>
+                <section>
+                    <h2>Możliwe do wykorzystania technologie/biblioteki/algorytmy</h2>
+                    <h3>Algorytmy:</h3>
+                    <ul>
+                        <li>
+                            Blend mode difference
+                        </li>
+                    </ul>
 
-	</div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Podstawy teoretyczne</h2>
+                    <h3>Ukryte modele Markova:</h3>
+                    <ul>
+                        <li>single</li>
+                        <li>linked</li>
+                        <li>coupled</li>
+                    </ul>
+                    <br>
+                    <h3>Uczenie:</h3>
+                    <ul>
+                        <li>Baum–Welch</li>
+                        <li>Baldi–Chauvin</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2>Bibliografia</h2>
+                <ul>
+                    <li>
 
-	<script src="lib/js/head.min.js"></script>
-	<script src="js/reveal.min.js"></script>
+                        <a href="http://www.shi-zhong.com/papers/chmm.pdf">A New Formulation of Coupled Hidden Markov Models, Shi Zhong and Joydeep Ghosh
+</a>
+                    </li>
+                    <li>
+                        <a href="http://www.ee.columbia.edu/~sfchang/course/svia-F03/papers/brand96coupled-hmm.pdf">Coupled Hidden Markov Models for complex action recognition, Matthew Brand, Nuria Oliver,Alex Pentland</a>
+                    </li>
+                </ul>
 
-	<script>
+            </section>
+        </div>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-				slideNumber: true ,
-				theme: 'night', // available themes are in /css/theme
-				transition: 'cube', // default/cube/page/concave/zoom/linear/fade/none
+    </div>
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+    <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+        theme: 'night', // available themes are in /css/theme
+        transition: 'cube', // default/cube/page/concave/zoom/linear/fade/none
 
-</script>
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+    </script>
 
 </body>
+
 </html>
